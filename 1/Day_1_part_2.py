@@ -7,14 +7,6 @@ def main():
     total = 0
     valid_digits_dict = {'one': 1, 'two': 2,  'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
 
-    def words_as_ints(string_to_convert):
-        for num in valid_digits_dict.keys():
-
-            if num in string_to_convert:
-                string_to_convert = string_to_convert.replace(num, str(valid_digits_dict[num]))
-
-        return string_to_convert
-
     def forward_check_line_for_numbers_as_words(line_string):
         for i in range(len(line_string)):
             if line_string[i:i+3] in valid_digits_dict:
